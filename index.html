@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="assets/Style/style.css">
     <!-- cdn for button in nav bar -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- cdn for swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
 </head>
 <body>
     <!-- ===== NAV BAR ====== -->
@@ -409,9 +413,34 @@
                 </div>
             </article>
         </div>
+        <!-- this div is those dot -->
         <div class="swiper-pagination"></div>
     </section>
-    
+
     <script src="Assets/JS/main.js"></script>
+
+    <!--  swiper js script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper",
+        {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: 
+            {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        // when window width is >= 600px
+            breakpoints: 
+            {
+                600: 
+                {
+                    slidesPerView: 2
+                }
+            }
+        });
+        </script>
+
 </body>
 </html>
